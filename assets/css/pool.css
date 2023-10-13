@@ -22,6 +22,6 @@ p.pool_footer {
   height: 5px;
 }
 
-body.t .disclaimer, body.x .disclaimer, body.x .trial {
-  display: none;
+.disclaimer {
+  display: none !important;
 }
