@@ -14,3 +14,9 @@
   height:100%;
   border:0;
 }
+
+p.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 95%;
+}
