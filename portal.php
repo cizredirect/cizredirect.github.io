@@ -11,13 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $degree = $_POST['degree'];
     $agree = $_POST['agree'];
 
-    // Send a confirmation email
-    $to = $email;
-    $subject = 'Confirmation Email';
-    $message = 'Thank you for submitting your information. This is a confirmation email.';
-    $headers = 'From: your@example.com';
-    mail($to, $subject, $message, $headers);
-
     // Upload the form data to Google Drive
     require 'vendor/autoload.php'; // Include Google PHP Client Library
     $client = new Google\Client();
