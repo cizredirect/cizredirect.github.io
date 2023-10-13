@@ -1,6 +1,103 @@
-<div class='forms-studio'>
-  <iframe src='https://script.google.com/macros/s/AKfycbxVx7XTXAGeXn8ohWphjiy-U3JWIMzyk3qNVjR92SBsK_7VYX0w/exec'></iframe></div>
-<div>
-  <p class="footer">This live demo of <a href="https://www.labnol.org/internet/file-upload-google-forms/29170/">File Upload Forms</a> is provided by <a href="https://digitalinspiration.com/GA14">Digital Inspiration</a>. For help, <a href="https://digitalinspiration.com/contact">get in touch</a>.
-  </p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portal - Cizonet Solutions</title>
+  <link href="assets/img/favicon.png" alt="Cizonet Solutions - IT Consulting and Solutions" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" alt="Cizonet Solutions - IT Consulting and Solutions" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="sitemap.xml" rel="sitemap" type="application/xml" title="Sitemap">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <form action="your_server_script.php" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="salutation">Salutation:</label>
+        <select class="form-control" id="salutation" name="salutation">
+          <option value="Mr">Mr</option>
+          <option value="Mrs">Mrs</option>
+          <option value="Ms">Ms</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="first_name">First Name:</label>
+          <input type="text" class="form-control" id="first_name" name="first_name" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="middle_name">Middle Name:</label>
+          <input type="text" class="form-control" id="middle_name" name="middle_name">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="last_name">Last Name:</label>
+          <input type="text" class="form-control" id="last_name" name="last_name" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+        <small class="form-text text-muted">We'll send a confirmation to this address.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" class="form-control" id="dob" name="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label>Gender:</label>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="male" name="gender" value="Male" required>
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="female" name="gender" value="Female" required>
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="degree">Degree:</label>
+        <input type="text" class="form-control" id="degree" name="degree" required>
+      </div>
+
+      <div class="form-group">
+        <label for="resume">Resume:</label>
+        <input type="file" class="form-control-file" id="resume" name="resume" accept=".pdf" required>
+        <small class="form-text text-muted">Upload your resume in PDF format only.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="pictures">Pictures:</label>
+        <input type="file" class="form-control-file" id="pictures" name="pictures[]" multiple accept="image/*">
+        <small class="form-text text-muted">Upload one or more recent pictures.</small>
+      </div>
+
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="agree" name="agree" value="Yes" required>
+        <label class="form-check-label" for="agree">Do you agree to the terms and conditions?</label>
+      </div>
+
+      <div class="form-group">
+        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <!-- Include Bootstrap JS and jQuery -->
+  <script src="path-to-your-bootstrap-js/bootstrap.min.js"></script>
+  <script src="path-to-your-jquery/jquery.min.js"></script>
+</body>
+</html>
