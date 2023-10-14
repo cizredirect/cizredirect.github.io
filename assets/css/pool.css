@@ -18,7 +18,7 @@
 .pool_footer {
   text-align: center;
   font-size: 95%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   padding: 20px;
