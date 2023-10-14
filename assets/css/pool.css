@@ -17,11 +17,11 @@
 
 .pool_footer {
   text-align: center;
-  font-size: 80%;
+  font-size: 90%;
   position: fixed !important;
   bottom: 0;
   width: 100%;
-  padding: 15px;
+  padding: 20px;
 }
 
 .pool_header {
