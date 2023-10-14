@@ -15,15 +15,6 @@
   border:0;
 }
 
-.pool_header {
-  text-align: center;
-  font-size: 95%;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-}
-
 .pool_footer {
   text-align: center;
   font-size: 60%;
