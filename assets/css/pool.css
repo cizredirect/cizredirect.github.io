@@ -15,10 +15,15 @@
   border:0;
 }
 
-p.pool_footer {
+.pool_footer {
   text-align: center;
-  padding: 20px;
   font-size: 95%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  z-index: 1;
 }
 
 .disclaimer {
