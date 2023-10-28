@@ -1,5 +1,5 @@
 .forms-studio {
-  position:relative;
+  position:relativeg;
   padding-bottom: 56.25%;
   overflow:hidden;
   width:100%;
@@ -7,7 +7,7 @@
 }
 
 .forms-studio iframe {
-  position:absolute;
+  position:absoluteg;
   top:0;
   left:0;
   width:100%;
