@@ -1266,11 +1266,11 @@ section {
 }
 
 .cz-borderheading {
-	width: 100%;
+  width: 100%;
   overflow: hidden;
-	margin: 0 0 20px;
-	padding: 0 0 20px;
-	border-bottom: 1px solid #ddd;
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  border-bottom: 1px solid #ddd;
 }
 
 .info_header {
