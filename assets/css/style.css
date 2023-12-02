@@ -1264,3 +1264,26 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
+.cz-borderheading {
+	width: 100%;
+  overflow: hidden;
+	margin: 0 0 20px;
+	padding: 0 0 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+.info_header {
+  margin-left: 0.6em;
+  width: auto;
+  font-size: 16px;
+  margin-bottom: 0.7em;
+}
+
+.info_header i {
+  font-size: 19px;
+}
+
+.text_2 {
+  margin-left: 1.5em;
+}
