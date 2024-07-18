@@ -1,405 +1,453 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>BSPI - Cizonet Solutions</title>
-  <link href="assets/img/favicon.png" alt="Cizonet Solutions" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" alt="Cizonet Solutions" rel="apple-touch-icon">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>BSPI - Cizonet Solutions</title>
+    <link href="assets/img/favicon.png" alt="Cizonet Solutions" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" alt="Cizonet Solutions" rel="apple-touch-icon">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
-  <link href="sitemap.xml" rel="sitemap" type="application/xml" title="Sitemap">
-  <link href="assets/css/pool.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="sitemap.xml" rel="sitemap" type="application/xml" title="Sitemap">
+    <link href="assets/css/pool.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
-  <style>
-    .container.intro-bspi {
-      font-family: Arial, sans-serif;
-      max-width: 500px;
-      padding: 20px;
-      border: 1px solid #031F49;
-      border-radius: 5px;
-      margin-top: 5%;
-      background-color: #f9f9f9;
-    }
-    .container.intro-bspi h1 {
-      color: #031F49;
-      text-align: center;
-    }
-    .container.intro-bspi p, .container.intro-bspi li {
-      font-size: 16px;
-      line-height: 1.5;
-      margin-bottom: 10px;
-    }
-    .container.intro-bspi ul {
-      padding-left: 20px;
-    }
-    .section-bspi {
-      margin-bottom: 20px;
-      padding: 10px;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-    .section-bspi h2 {
-      color: #031F49;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-    .question-bspi {
-      margin-bottom: 10px;
-    }
-    .question-bspi input[type="radio"] {
-      margin-right: 10px;
-    }
-    .question-bspi label {
-      font-size: 16px;
-    }
-    .btn-submit {
-      display: block;
-      width: 100px;
-      padding: 10px;
-      background-color: #031F49;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      text-align: center;
-    }
-    .btn-submit:hover {
-      background-color: #021738;
-    }
-  </style>
+    <style>
+        .intro-bspi-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .intro-bspi {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            padding: 20px;
+            border: 1px solid #031F49;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+    
+        .container.intro-bspi h1 {
+            color: #031F49;
+            text-align: center;
+        }
+    
+        .container.intro-bspi p,
+        .container.intro-bspi li {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+    
+        .container.intro-bspi ul {
+            padding-left: 20px;
+        }
+    
+        .section-bspi {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    
+        .section-bspi h2 {
+            color: #031F49;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    
+        .question-bspi {
+            margin-bottom: 10px;
+        }
+    
+        .question-bspi input[type="radio"] {
+            margin-right: 10px;
+        }
+    
+        .question-bspi label {
+            font-size: 16px;
+        }
+    
+        .btn-submit {
+            display: flex;
+            width: 13%;
+            padding: 10px;
+            background-color: #031F49;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            margin: 22px auto;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .btn-submit:hover {
+            background-color: #021738;
+        }
+    </style>
 </head>
 
 <body>
-  <div id="header" class="align-items-center pool_header pt-3 pb-1">
-    <div class="container d-flex align-items-center justify-content-between">
+    <div id="header" class="align-items-center pool_header pt-3 pb-1">
+        <div class="container d-flex align-items-center justify-content-between">
 
-      <div class="logo">
-        <a href=""><img src="assets/img/logo2.png" alt="Cizonet Solutions - IT & HR Solutions" class="img-fluid"></a>
-      </div>
+            <div class="logo">
+                <a href=""><img src="assets/img/logo2.png" alt="Cizonet Solutions - IT & HR Solutions"
+                        class="img-fluid"></a>
+            </div>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto" href="https://cizonet.com/">Home</a></li>
-          <li><a class="nav-link scrollto" href="https://cizonet.com/#about">About</a></li>
-          <li><a class="nav-link scrollto" href="https://cizonet.com/#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="https://cizonet.com/#values">Process</a></li>
-          <li><a class="nav-link scrollto" href="https://blog.cizonet.com/">Blog</a></li>
-          <li><a class="nav-link scrollto" href="https://cizonet.com/#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="https://cizonet.com/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="https://cizonet.com/#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="https://cizonet.com/#services">Services</a></li>
+                    <li><a class="nav-link scrollto" href="https://cizonet.com/#values">Process</a></li>
+                    <li><a class="nav-link scrollto" href="https://blog.cizonet.com/">Blog</a></li>
+                    <li><a class="nav-link scrollto" href="https://cizonet.com/#contact">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
     </div>
-  </div>
 
-  <div class="container">
-    <h1>BELBIN’S SELF-PERCEPTION INVENTORY</h1>
-    <p>This exercise uses a set of questions to determine your natural position(s) within Belbin’s team-role model. Each
-        of us has natural inclinations that cause some activities to be easier and more natural for us, while others
-        require greater effort. Understanding your natural position will allow you to capitalize on those strengths, and
-        better respond to the weaknesses.</p>
-    
-    <h2>Requirements</h2>
-    <ul>
-        <li>Each of the 7 sections below consists of a general comment followed by a series of related statements. For
-            each section, distribute 10 points among the related statements in a way that best describes your behavior
-            and attitudes. You may assign all the points to one statement if you feel strongly about it, or distribute
-            the points over more than one of the statements if several appeal to you. You are allowed a total of 70
-            points (10 points for each section).</li>
-        <li>Take your time, think carefully, and respond honestly. Remember that there are no right or wrong answers.
-        </li>
-        <li>After you complete the 7 sections, transcribe your allocation of points into the Points Table on page 6.
-        </li>
-        <li>To interpret your responses in terms of Belbin’s team roles, transcribe the points from the Points Table
-            (page 6) to the Analysis Sheet (page 7). Be careful, as the sequence of statements changes from page 6 to 7.
-        </li>
-        <li>You have 30 minutes to complete the inventory.</li>
-    </ul>
-    
-    <form action="/submit" method="post">
-        <div class="section">
-            <h2>1. I believe my contribution(s) to a team include:</h2>
-            <div class="question">
-                <input type="radio" id="q1a" name="q1" value="a">
-                <label for="q1a">I quickly see and take advantage of new opportunities.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q1b" name="q1" value="b">
-                <label for="q1b">I work well with a very wide range of people.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q1c" name="q1" value="c">
-                <label for="q1c">Producing ideas is one of my natural assets.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q1d" name="q1" value="d">
-                <label for="q1d">I am able to draw people out whenever I detect they have something of value to
-                    contribute to group objectives.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q1e" name="q1" value="e">
-                <label for="q1e">My capacity to follow through results from my personal effectiveness.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q1f" name="q1" value="f">
-                <label for="q1f">I am ready to face temporary unpopularity if it leads to worthwhile results.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q1g" name="q1" value="g">
-                <label for="q1g">I am quick to sense what will work in a situation with which I am familiar.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q1h" name="q1" value="h">
-                <label for="q1h">I offer a reasoned case for alternative courses of action without introducing bias or
-                    prejudice.</label>
-            </div>
-        </div>
-    
-        <div class="section">
-            <h2>2. My weakness in teamwork include:</h2>
-            <div class="question">
-                <input type="radio" id="q2a" name="q2" value="a">
-                <label for="q2a">I am comfortable in meetings that are not well structured, controlled and
-                    conducted.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q2b" name="q2" value="b">
-                <label for="q2b">I am inclined to be too generous towards others who have a valid viewpoint that has not
-                    been given a proper consideration.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q2c" name="q2" value="c">
-                <label for="q2c">I have a tendency to talk a lot when the group is discussing new ideas.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q2d" name="q2" value="d">
-                <label for="q2d">My objectivity makes it difficult for me to join in readily and enthusiastically with
-                    colleagues.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q2e" name="q2" value="e">
-                <label for="q2e">I am seen as forceful and authoritarian, if there is a need to get things done.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q2f" name="q2" value="f">
-                <label for="q2f">I find it difficult to lead because I am over-responsive to group atmosphere.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q2g" name="q2" value="g">
-                <label for="q2g">I often become caught up in my ideas and lose track of what is happening.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q2h" name="q2" value="h">
-                <label for="q2h">My colleagues tend to see me as worrying unnecessarily over detail and the possibility
-                    that things might go wrong.</label>
-            </div>
-        </div>
-    
-        <div class="section">
-            <h2>3. When involved in a project with other people:</h2>
-            <div class="question">
-                <input type="radio" id="q3a" name="q3" value="a">
-                <label for="q3a">I can influence people without making them feel pressured.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q3b" name="q3" value="b">
-                <label for="q3b">My general vigilance prevents careless mistakes and omissions.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q3c" name="q3" value="c">
-                <label for="q3c">I am ready to take action to make sure that a meeting does not waste time or lose sight
-                    of its main objectives.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q3d" name="q3" value="d">
-                <label for="q3d">I can be counted on to contribute something original.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q3e" name="q3" value="e">
-                <label for="q3e">I am always ready to support a good suggestion.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q3f" name="q3" value="f">
-                <label for="q3f">I tend to look for the latest in new ideas and developments.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q3g" name="q3" value="g">
-                <label for="q3g">I believe others appreciate my capacity for good judgment.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q3h" name="q3" value="h">
-                <label for="q3h">I can be relied upon to ensure that all essential work is organized.</label>
-            </div>
-        </div>
-    
-        <div class="section">
-            <h2>4. My approach to group work is that:</h2>
-            <div class="question">
-                <input type="radio" id="q4a" name="q4" value="a">
-                <label for="q4a">I have a quiet interest in getting to know colleagues better.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q4b" name="q4" value="b">
-                <label for="q4b">I am not reluctant to challenge the views of others or to hold a minority view
-                    myself.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q4c" name="q4" value="c">
-                <label for="q4c">I am prepared to take a predetermined course of action if I see the group is making no
-                    progress.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q4d" name="q4" value="d">
-                <label for="q4d">I try to make connections between various suggestions in order to come up with an idea of
-                    my own.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q4e" name="q4" value="e">
-                <label for="q4e">I try to keep up a sense of fairness no matter what the situation.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q4f" name="q4" value="f">
-                <label for="q4f">I am always ready to offer a step-by-step plan.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q4g" name="q4" value="g">
-                <label for="q4g">I think I have a talent for making things work once a plan has to be put into
-                    operation.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q4h" name="q4" value="h">
-                <label for="q4h">I have a readiness to see and manage implications of events.</label>
-            </div>
-        </div>
-    
-        <div class="section">
-            <h2>5. I gain satisfaction in a job because:</h2>
-            <div class="question">
-                <input type="radio" id="q5a" name="q5" value="a">
-                <label for="q5a">I enjoy analysing situations and problems.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q5b" name="q5" value="b">
-                <label for="q5b">I enjoy co-ordinating work.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q5c" name="q5" value="c">
-                <label for="q5c">I enjoy motivating people to pursue agreed goals.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q5d" name="q5" value="d">
-                <label for="q5d">I enjoy having a sense of direction.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q5e" name="q5" value="e">
-                <label for="q5e">I enjoy exploring ideas and developments.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q5f" name="q5" value="f">
-                <label for="q5f">I enjoy maintaining an awareness of the group atmosphere.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q5g" name="q5" value="g">
-                <label for="q5g">I enjoy working under pressure.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q5h" name="q5" value="h">
-                <label for="q5h">I enjoy looking for the latest in new ideas and developments.</label>
-            </div>
-        </div>
-    
-        <div class="section">
-            <h2>6. If I am suddenly given a difficult task with limited time and unfamiliar people:</h2>
-            <div class="question">
-                <input type="radio" id="q6a" name="q6" value="a">
-                <label for="q6a">I emphasize the need to achieve the objective.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q6b" name="q6" value="b">
-                <label for="q6b">I try to find a way of reducing the size of the task by establishing what different
-                    individuals might best contribute.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q6c" name="q6" value="c">
-                <label for="q6c">I find some argument to support my case and present it with spirit and conviction.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q6d" name="q6" value="d">
-                <label for="q6d">I am prepared to take a lead if I feel the group is making no progress.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q6e" name="q6" value="e">
-                <label for="q6e">I keep a steady eye on the areas where progress is lacking.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q6f" name="q6" value="f">
-                <label for="q6f">I am conscious of and concerned about group morale.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q6g" name="q6" value="g">
-                <label for="q6g">I draw attention to people who I see as the natural sources of contributions.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q6h" name="q6" value="h">
-                <label for="q6h">I think I have a talent for organizing people.</label>
-            </div>
-        </div>
-    
-        <div class="section">
-            <h2>7. With reference to problems that arise in working in groups:</h2>
-            <div class="question">
-                <input type="radio" id="q7a" name="q7" value="a">
-                <label for="q7a">I try to find a solution that satisfies everyone.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q7b" name="q7" value="b">
-                <label for="q7b">I often see a need to challenge the views of others or to hold a minority view
-                    myself.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q7c" name="q7" value="c">
-                <label for="q7c">I am used to contributing ideas that others might not have thought of.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q7d" name="q7" value="d">
-                <label for="q7d">I am ready to take action to make sure that a meeting does not waste time or lose sight of
-                    its main objectives.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q7e" name="q7" value="e">
-                <label for="q7e">I am conscious of and concerned about group morale.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q7f" name="q7" value="f">
-                <label for="q7f">I try to find a way of reducing the size of the task by establishing what different
-                    individuals might best contribute.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q7g" name="q7" value="g">
-                <label for="q7g">I believe others appreciate my capacity for good judgment.</label>
-            </div>
-            <div class="question">
-                <input type="radio" id="q7h" name="q7" value="h">
-                <label for="q7h">I draw attention to people who I see as the natural sources of contributions.</label>
-            </div>
-        </div>
-    
-        <button class="btn-submit" type="submit">Submit</button>
-    </form>
-  </div>
 
-  <footer id="footer">
+    <div class="intro-bspi-container">
+        <div class="container intro-bspi">
+            <h1>BELBIN’S SELF-PERCEPTION INVENTORY</h1>
+            <p>This exercise uses a set of questions to determine your natural position(s) within Belbin’s team-role model.
+                Each
+                of us has natural inclinations that cause some activities to be easier and more natural for us, while others
+                require greater effort. Understanding your natural position will allow you to capitalize on those strengths,
+                and
+                better respond to the weaknesses.</p>
+        
+            <h2>Requirements</h2>
+            <ul>
+                <li>Each of the 7 sections below consists of a general comment followed by a series of related statements.
+                    For
+                    each section, distribute 10 points among the related statements in a way that best describes your
+                    behavior
+                    and attitudes. You may assign all the points to one statement if you feel strongly about it, or
+                    distribute
+                    the points over more than one of the statements if several appeal to you. You are allowed a total of 70
+                    points (10 points for each section).</li>
+                <li>Take your time, think carefully, and respond honestly. Remember that there are no right or wrong
+                    answers.
+                </li>
+                <li>After you complete the 7 sections, transcribe your allocation of points into the Points Table on page 6.
+                </li>
+                <li>To interpret your responses in terms of Belbin’s team roles, transcribe the points from the Points Table
+                    (page 6) to the Analysis Sheet (page 7). Be careful, as the sequence of statements changes from page 6
+                    to 7.
+                </li>
+                <li>You have 30 minutes to complete the inventory.</li>
+            </ul>
+        
+            <form action="/submit" method="post">
+                <div class="section">
+                    <h2>1. I believe my contribution(s) to a team include:</h2>
+                    <div class="question">
+                        <input type="radio" id="q1a" name="q1" value="a">
+                        <label for="q1a">I quickly see and take advantage of new opportunities.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q1b" name="q1" value="b">
+                        <label for="q1b">I work well with a very wide range of people.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q1c" name="q1" value="c">
+                        <label for="q1c">Producing ideas is one of my natural assets.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q1d" name="q1" value="d">
+                        <label for="q1d">I am able to draw people out whenever I detect they have something of value to
+                            contribute to group objectives.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q1e" name="q1" value="e">
+                        <label for="q1e">My capacity to follow through results from my personal effectiveness.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q1f" name="q1" value="f">
+                        <label for="q1f">I am ready to face temporary unpopularity if it leads to worthwhile
+                            results.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q1g" name="q1" value="g">
+                        <label for="q1g">I am quick to sense what will work in a situation with which I am familiar.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q1h" name="q1" value="h">
+                        <label for="q1h">I offer a reasoned case for alternative courses of action without introducing bias
+                            or
+                            prejudice.</label>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h2>2. My weakness in teamwork include:</h2>
+                    <div class="question">
+                        <input type="radio" id="q2a" name="q2" value="a">
+                        <label for="q2a">I am comfortable in meetings that are not well structured, controlled and
+                            conducted.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q2b" name="q2" value="b">
+                        <label for="q2b">I am inclined to be too generous towards others who have a valid viewpoint that has
+                            not
+                            been given a proper consideration.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q2c" name="q2" value="c">
+                        <label for="q2c">I have a tendency to talk a lot when the group is discussing new ideas.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q2d" name="q2" value="d">
+                        <label for="q2d">My objectivity makes it difficult for me to join in readily and enthusiastically
+                            with
+                            colleagues.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q2e" name="q2" value="e">
+                        <label for="q2e">I am seen as forceful and authoritarian, if there is a need to get things
+                            done.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q2f" name="q2" value="f">
+                        <label for="q2f">I find it difficult to lead because I am over-responsive to group
+                            atmosphere.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q2g" name="q2" value="g">
+                        <label for="q2g">I often become caught up in my ideas and lose track of what is happening.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q2h" name="q2" value="h">
+                        <label for="q2h">My colleagues tend to see me as worrying unnecessarily over detail and the
+                            possibility
+                            that things might go wrong.</label>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h2>3. When involved in a project with other people:</h2>
+                    <div class="question">
+                        <input type="radio" id="q3a" name="q3" value="a">
+                        <label for="q3a">I can influence people without making them feel pressured.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q3b" name="q3" value="b">
+                        <label for="q3b">My general vigilance prevents careless mistakes and omissions.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q3c" name="q3" value="c">
+                        <label for="q3c">I am ready to take action to make sure that a meeting does not waste time or lose
+                            sight
+                            of its main objectives.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q3d" name="q3" value="d">
+                        <label for="q3d">I can be counted on to contribute something original.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q3e" name="q3" value="e">
+                        <label for="q3e">I am always ready to support a good suggestion.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q3f" name="q3" value="f">
+                        <label for="q3f">I tend to look for the latest in new ideas and developments.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q3g" name="q3" value="g">
+                        <label for="q3g">I believe others appreciate my capacity for good judgment.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q3h" name="q3" value="h">
+                        <label for="q3h">I can be relied upon to ensure that all essential work is organized.</label>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h2>4. My approach to group work is that:</h2>
+                    <div class="question">
+                        <input type="radio" id="q4a" name="q4" value="a">
+                        <label for="q4a">I have a quiet interest in getting to know colleagues better.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q4b" name="q4" value="b">
+                        <label for="q4b">I am not reluctant to challenge the views of others or to hold a minority view
+                            myself.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q4c" name="q4" value="c">
+                        <label for="q4c">I am prepared to take a predetermined course of action if I see the group is making
+                            no
+                            progress.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q4d" name="q4" value="d">
+                        <label for="q4d">I try to make connections between various suggestions in order to come up with an
+                            idea of
+                            my own.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q4e" name="q4" value="e">
+                        <label for="q4e">I try to keep up a sense of fairness no matter what the situation.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q4f" name="q4" value="f">
+                        <label for="q4f">I am always ready to offer a step-by-step plan.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q4g" name="q4" value="g">
+                        <label for="q4g">I think I have a talent for making things work once a plan has to be put into
+                            operation.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q4h" name="q4" value="h">
+                        <label for="q4h">I have a readiness to see and manage implications of events.</label>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h2>5. I gain satisfaction in a job because:</h2>
+                    <div class="question">
+                        <input type="radio" id="q5a" name="q5" value="a">
+                        <label for="q5a">I enjoy analysing situations and problems.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q5b" name="q5" value="b">
+                        <label for="q5b">I enjoy co-ordinating work.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q5c" name="q5" value="c">
+                        <label for="q5c">I enjoy motivating people to pursue agreed goals.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q5d" name="q5" value="d">
+                        <label for="q5d">I enjoy having a sense of direction.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q5e" name="q5" value="e">
+                        <label for="q5e">I enjoy exploring ideas and developments.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q5f" name="q5" value="f">
+                        <label for="q5f">I enjoy maintaining an awareness of the group atmosphere.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q5g" name="q5" value="g">
+                        <label for="q5g">I enjoy working under pressure.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q5h" name="q5" value="h">
+                        <label for="q5h">I enjoy looking for the latest in new ideas and developments.</label>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h2>6. If I am suddenly given a difficult task with limited time and unfamiliar people:</h2>
+                    <div class="question">
+                        <input type="radio" id="q6a" name="q6" value="a">
+                        <label for="q6a">I emphasize the need to achieve the objective.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q6b" name="q6" value="b">
+                        <label for="q6b">I try to find a way of reducing the size of the task by establishing what different
+                            individuals might best contribute.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q6c" name="q6" value="c">
+                        <label for="q6c">I find some argument to support my case and present it with spirit and
+                            conviction.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q6d" name="q6" value="d">
+                        <label for="q6d">I am prepared to take a lead if I feel the group is making no progress.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q6e" name="q6" value="e">
+                        <label for="q6e">I keep a steady eye on the areas where progress is lacking.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q6f" name="q6" value="f">
+                        <label for="q6f">I am conscious of and concerned about group morale.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q6g" name="q6" value="g">
+                        <label for="q6g">I draw attention to people who I see as the natural sources of
+                            contributions.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q6h" name="q6" value="h">
+                        <label for="q6h">I think I have a talent for organizing people.</label>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h2>7. With reference to problems that arise in working in groups:</h2>
+                    <div class="question">
+                        <input type="radio" id="q7a" name="q7" value="a">
+                        <label for="q7a">I try to find a solution that satisfies everyone.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q7b" name="q7" value="b">
+                        <label for="q7b">I often see a need to challenge the views of others or to hold a minority view
+                            myself.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q7c" name="q7" value="c">
+                        <label for="q7c">I am used to contributing ideas that others might not have thought of.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q7d" name="q7" value="d">
+                        <label for="q7d">I am ready to take action to make sure that a meeting does not waste time or lose
+                            sight of
+                            its main objectives.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q7e" name="q7" value="e">
+                        <label for="q7e">I am conscious of and concerned about group morale.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q7f" name="q7" value="f">
+                        <label for="q7f">I try to find a way of reducing the size of the task by establishing what different
+                            individuals might best contribute.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q7g" name="q7" value="g">
+                        <label for="q7g">I believe others appreciate my capacity for good judgment.</label>
+                    </div>
+                    <div class="question">
+                        <input type="radio" id="q7h" name="q7" value="h">
+                        <label for="q7h">I draw attention to people who I see as the natural sources of
+                            contributions.</label>
+                    </div>
+                </div>
+        
+                <button class="btn-submit" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <footer id="footer">
 
         <div class="footer-top">
             <div class="container">
@@ -422,7 +470,8 @@
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="https://training.cizonet.com/">Training</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://training.cizonet.com/">Training</a>
+                            </li>
                             <li><i class="bx bx-chevron-right"></i> <a href="https://blog.cizonet.com/">Blog</a></li>
                         </ul>
                     </div>
@@ -443,7 +492,11 @@
                             <i class="fa fa-quote-left text-white"></i>
                         </div>
                         <p class="mb-0 mt-2 font-italic">
-                            "Technology has the power to transform businesses and a strong HR strategy can optimize workforce potential. At Cizonet, we are dedicated to harnessing that power for innovative solutions that drive success, optimizing both IT and HR processes. Together, Let's create a future where technology empowers businesses to thrive, and HR solutions elevate workforce effectiveness."
+                            "Technology has the power to transform businesses and a strong HR strategy can optimize
+                            workforce potential. At Cizonet, we are dedicated to harnessing that power for innovative
+                            solutions that drive success, optimizing both IT and HR processes. Together, Let's create a
+                            future where technology empowers businesses to thrive, and HR solutions elevate workforce
+                            effectiveness."
                         </p>
                         <footer class="blockquote-footer pt-4 mt-4 border-top">
                             Osaze Joseph Obayagbona
@@ -462,26 +515,37 @@
                 </div>
             </div>
             <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
-                <a href="https://www.twitter.com/cizonet_co" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="https://www.facebook.com/cizonetsolutions" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="https://www.instagram.com/cizonet" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="https://maps.app.goo.gl/Swp8UWF7UMpLHFHo8?g_st=iw" target="_blank" class="google-plus"><i class="bx bxl-google"></i></a>
-                <a href="https://www.linkedin.com/company/cizonet" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                <a style="background:none !important" target="_blank" href="https://www.goodfirms.co/company/cizonet-solutions"><img src="https://assets.goodfirms.co/badges/color-badge/business-services.svg" title="Cizonet Solutions Company" alt="Cizonet Solutions Company"></a>
+                <a href="https://www.twitter.com/cizonet_co" target="_blank" class="twitter"><i
+                        class="bx bxl-twitter"></i></a>
+                <a href="https://www.facebook.com/cizonetsolutions" target="_blank" class="facebook"><i
+                        class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/cizonet" target="_blank" class="instagram"><i
+                        class="bx bxl-instagram"></i></a>
+                <a href="https://maps.app.goo.gl/Swp8UWF7UMpLHFHo8?g_st=iw" target="_blank" class="google-plus"><i
+                        class="bx bxl-google"></i></a>
+                <a href="https://www.linkedin.com/company/cizonet" target="_blank" class="linkedin"><i
+                        class="bx bxl-linkedin"></i></a>
+                <a style="background:none !important" target="_blank"
+                    href="https://www.goodfirms.co/company/cizonet-solutions"><img
+                        src="https://assets.goodfirms.co/badges/color-badge/business-services.svg"
+                        title="Cizonet Solutions Company" alt="Cizonet Solutions Company"></a>
             </div>
         </div>
     </footer>
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  
-  <script async defer src="https://formfacade.com/include/115496799771229253670/form/1FAIpQLSeSLyrwMan_V5Fa2hCVE9zjVnbS8ERwc5KJ7awDXobJg1msTw/bootstrap.js?div=ff-compose"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/js/main.js"></script>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <script async defer
+        src="https://formfacade.com/include/115496799771229253670/form/1FAIpQLSeSLyrwMan_V5Fa2hCVE9zjVnbS8ERwc5KJ7awDXobJg1msTw/bootstrap.js?div=ff-compose"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
