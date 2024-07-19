@@ -59,6 +59,47 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "DHhTcwyiLDvMh3zm2",
+        });
+      })();
+
+      function sendEmail(event) {
+        event.preventDefault();
+
+        const userName = document.getElementById("name").value;
+        const userEmail = document.getElementById("email").value;
+        const userSubject = document.getElementById("subject").value;
+        const userMessage = document.getElementsByName("message")[0].value;
+
+        const templateParams = {
+          to_name: "Cizonet Solutions",
+          from_name: userName,
+          from_email: userEmail,
+          subject: userSubject,
+          message: userMessage,
+        };
+
+        emailjs
+          .send("service_kjjokg6", "template_ar974se", templateParams)
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+              alert("Thank You, Cizonet Solutions has received your message.");
+              window.location.href = "https://cizonet.com";
+            },
+            function (error) {
+              console.log("FAILED...", error);
+            }
+          );
+      }
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", sendEmail);
+    </script>
   </head>
 
   <body>
