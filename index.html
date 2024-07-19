@@ -576,55 +576,24 @@
             data-aos-delay="300"
           >
             <div class="col-xl-9 col-lg-12 mt-4">
-              <form id="contactForm" role="form" class="php-email-form" onsubmit="sendEmail(event);>
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      placeholder="Your Name"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="form-group mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="subject"
-                    id="subject"
-                    placeholder="Subject"
-                    required
-                  />
-                </div>
-                <div class="form-group mt-3">
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="5"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                </div>
-                <br />
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary btn-submit">
-                    Send Message
-                  </button>
-                </div>
-              </form>
+              form role="form" class="php-email-form">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                            </div>
+                            </br>
+                            <div class="text-center"><button type="submit" onclick="location.href='mailto:contact@cizonet.com?subject=' + encodeURIComponent(document.getElementById('subject').value) + '&body=Name: ' + encodeURIComponent(document.getElementById('name').value) + '%0D%0AEmail: ' + encodeURIComponent(document.getElementById('email').value) + '%0D%0ASubject: ' + encodeURIComponent(document.getElementById('subject').value) + '%0D%0AMessage: ' + encodeURIComponent(document.getElementsByName('message')[0].value); alert('Thank you! Your email app will open now. Expect a swift reply.'); document.getElementById('name').value = ''; document.getElementById('email').value = ''; document.getElementById('subject').value = ''; document.getElementsByName('message')[0].value = '';" class="btn btn-primary">Send Message</button></div>
+                        </form>
             </div>
           </div>
         </div>
