@@ -159,21 +159,23 @@
       }
 
       .inline-fields {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Adjust as needed */
-}
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* Adjust as needed */
+      }
 
-.inline-fields .form-field {
-    flex: 1;
-    min-width: calc(50% - 20px); /* Ensures they stay on one line on larger screens */
-}
+      .inline-fields .form-field {
+        flex: 1;
+        min-width: calc(
+          50% - 20px
+        ); /* Ensures they stay on one line on larger screens */
+      }
 
-@media (max-width: 768px) {
-    .inline-fields .form-field {
-        min-width: 100%; /* Stacks the fields on smaller screens */
-    }
-}
+      @media (max-width: 768px) {
+        .inline-fields .form-field {
+          min-width: 100%; /* Stacks the fields on smaller screens */
+        }
+      }
     </style>
   </head>
 
@@ -832,4 +834,5 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+
 
