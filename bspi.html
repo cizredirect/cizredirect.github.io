@@ -87,17 +87,22 @@
         align-items: center;
         margin-bottom: 10px;
         padding-bottom: 5px;
+        gap: 5px;
       }
 
       .question-bspi input[type="radio"] {
         margin-right: 10px;
+        margin-top: 3px;
       }
 
       .question-bspi label {
         font-size: 16px;
         white-space: normal;
         max-width: 95%;
-        min-width: 80px; 
+        min-width: 80px;
+        display: flex;
+        align-items: flex-start;
+        line-height: 20px;
       }
 
       .form-group {
@@ -148,7 +153,7 @@
       .form-field label {
         font-size: 16px;
         margin-right: 10px;
-        min-width: 80px; 
+        min-width: 80px;
       }
 
       .form-field input {
@@ -162,17 +167,24 @@
       .inline-fields {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px; /* Adjust as needed */
+        gap: 20px;
       }
 
       .inline-fields .form-field {
         flex: 1;
-        min-width: calc(
-          50% - 20px
-        );
+        min-width: calc(50% - 20px);
       }
 
       @media (max-width: 768px) {
+        .question-bspi {
+          gap: 10px;
+        }
+
+        .question-bspi label {
+          font-size: 14px;
+          max-width: 85%;
+        }
+
         .inline-fields .form-field {
           min-width: 100%;
         }
@@ -835,5 +847,6 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+
 
 
