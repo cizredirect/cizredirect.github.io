@@ -175,6 +175,10 @@
         min-width: calc(50% - 20px);
       }
 
+      .subject-header {
+        display: none;
+      }
+
       @media (max-width: 768px) {
         .question-bspi {
           gap: 10px;
@@ -197,13 +201,11 @@
     ></script>
     <script type="text/javascript">
       (function () {
-        emailjs.init({
-          publicKey: "DHhTcwyiLDvMh3zm2",
-        });
+        emailjs.init("DHhTcwyiLDvMh3zm2");
       })();
 
       function sendEmail(event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault(); // Prevent the default form submission
 
         const userName = document.getElementById("full-name").value;
         const userEmail = document.getElementById("email").value;
@@ -219,16 +221,21 @@
           to_name: "Cizonet Solutions",
           from_name: userName,
           from_email: userEmail,
+          subject: "BSPI",
           message: `1. ${q1}\n2. ${q2}\n3. ${q3}\n4. ${q4}\n5. ${q5}\n6. ${q6}\n7. ${q7}`,
         };
+
+        document.getElementById("subject").innerText = templateParams.subject;
 
         emailjs
           .send("service_kjjokg6", "template_ar974se", templateParams)
           .then(
-            (response) => {
+            function (response) {
               console.log("SUCCESS!", response.status, response.text);
+              alert("Thank You, Cizonet Solutions has received your message.");
+              window.location.href = "https://cizonet.com";
             },
-            (error) => {
+            function (error) {
               console.log("FAILED...", error);
             }
           );
@@ -325,6 +332,7 @@
         </ul>
 
         <form id="contact-form" onsubmit="sendEmail(event);">
+          <h1 class="subject-header" id="subject">BSPI</h1>
           <div class="inline-fields">
             <div class="form-field">
               <label for="full-name">Full Name:</label>
