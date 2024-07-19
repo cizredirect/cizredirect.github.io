@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -202,7 +203,9 @@
         });
       })();
 
-      function sendEmail() {
+      function sendEmail(event) {
+        event.preventDefault(); // Prevent default form submission
+
         const userName = document.getElementById("full-name").value;
         const userEmail = document.getElementById("email").value;
         const q1 = document.querySelector('input[name="q1"]:checked').value;
@@ -321,7 +324,7 @@
           <li>You have 30 minutes to complete the inventory.</li>
         </ul>
 
-        <form onsubmit="sendEmail(); return false;">
+        <form onsubmit="sendEmail();">
           <div class="inline-fields">
             <div class="form-field">
               <label for="full-name">Full Name:</label>
@@ -1156,11 +1159,6 @@
       ><i class="bi bi-arrow-up-short"></i
     ></a>
 
-    <script
-      async
-      defer
-      src="https://formfacade.com/include/115496799771229253670/form/1FAIpQLSeSLyrwMan_V5Fa2hCVE9zjVnbS8ERwc5KJ7awDXobJg1msTw/bootstrap.js?div=ff-compose"
-    ></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
