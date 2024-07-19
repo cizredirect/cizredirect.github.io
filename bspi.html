@@ -97,6 +97,7 @@
         font-size: 16px;
         white-space: normal;
         max-width: 95%;
+        min-width: 80px; 
       }
 
       .form-group {
@@ -140,7 +141,7 @@
         display: flex;
         align-items: center;
         margin-top: 0.5em;
-        margin-bottom: 0.5em;
+        margin-bottom: 1.5em;
         justify-content: space-between;
       }
 
@@ -168,12 +169,12 @@
         flex: 1;
         min-width: calc(
           50% - 20px
-        ); /* Ensures they stay on one line on larger screens */
+        );
       }
 
       @media (max-width: 768px) {
         .inline-fields .form-field {
-          min-width: 100%; /* Stacks the fields on smaller screens */
+          min-width: 100%;
         }
       }
     </style>
