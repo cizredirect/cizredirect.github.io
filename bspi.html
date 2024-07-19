@@ -24,84 +24,107 @@
     <link href="assets/css/style.css" rel="stylesheet">
 
     <style>
-        .intro-bspi-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    
-        .intro-bspi {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            padding: 20px;
-            border: 1px solid #031F49;
-            border-radius: 5px;
-            background-color: #fff;
-        }
-    
-        .container.intro-bspi h1 {
-            color: #031F49;
-            text-align: center;
-        }
-    
-        .container.intro-bspi p,
-        .container.intro-bspi li {
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 10px;
-        }
-    
-        .container.intro-bspi ul {
-            padding-left: 20px;
-        }
-    
-        .section-bspi {
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-    
-        .section-bspi h2 {
-            color: #031F49;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-    
-        .question-bspi {
-            margin-bottom: 10px;
-        }
-    
-        .question-bspi input[type="radio"] {
-            margin-right: 10px;
-        }
-    
-        .question-bspi label {
-            font-size: 16px;
-            white-space: nowrap;
-        }
-    
-        .btn-submit {
-            display: flex;
-            width: 120px;
-            padding: 10px;
-            background-color: #031F49;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            text-align: center;
-            margin: 22px auto;
-            justify-content: center;
-            align-items: center;
-        }
-    
-        .btn-submit:hover {
-            background-color: #021738;
-        }
-    </style>
+    .intro-bspi-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0; /* Optional: for better visual alignment */
+    }
+
+    .intro-bspi {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        padding: 20px;
+        border: 1px solid #031F49;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .container.intro-bspi h1 {
+        color: #031F49;
+        text-align: center;
+    }
+
+    .container.intro-bspi p,
+    .container.intro-bspi li {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .container.intro-bspi ul {
+        padding-left: 20px;
+    }
+
+    .section-bspi {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .section-bspi h2 {
+        color: #031F49;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .question-bspi {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .question-bspi input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    .question-bspi label {
+        font-size: 16px;
+        margin-right: 10px;
+        white-space: nowrap;
+    }
+
+    .form-group {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .form-group input {
+        flex: 1;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .btn-submit {
+        display: block;
+        width: 120px;
+        padding: 10px;
+        background-color: #031F49;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        margin: 22px auto;
+    }
+
+    .btn-submit:hover {
+        background-color: #021738;
+    }
+</style>
 </head>
 
 <body>
