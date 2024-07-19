@@ -142,6 +142,45 @@
         background-color: #021738;
       }
 
+      .btn-submit.loading {
+        background-color: #021738;
+        cursor: not-allowed;
+      }
+
+      .btn-submit.loading::before {
+        content: "Sending…";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 16px;
+      }
+
+      .btn-submit.loading::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 16px;
+        height: 16px;
+        margin-top: -8px;
+        margin-left: 20px;
+        border-radius: 50%;
+        border: 2px solid white;
+        border-top-color: transparent;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+
       .form-field {
         display: flex;
         align-items: center;
@@ -205,7 +244,11 @@
       })();
 
       function sendEmail(event) {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault();
+
+        const submitButton = document.querySelector(".btn-submit");
+        submitButton.classList.add("loading");
+        submitButton.disabled = true;
 
         const userName = document.getElementById("full-name").value;
         const userEmail = document.getElementById("email").value;
@@ -237,6 +280,8 @@
             },
             function (error) {
               console.log("FAILED...", error);
+              submitButton.classList.remove("loading");
+              submitButton.disabled = false;
             }
           );
       }
