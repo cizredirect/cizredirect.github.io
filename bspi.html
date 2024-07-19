@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -217,6 +216,7 @@
         const q7 = document.querySelector('input[name="q7"]:checked').value;
 
         const templateParams = {
+          to_name: "Cizonet Solutions",
           from_name: userName,
           from_email: userEmail,
           message: `1. ${q1}\n2. ${q2}\n3. ${q3}\n4. ${q4}\n5. ${q5}\n6. ${q6}\n7. ${q7}`,
@@ -225,10 +225,10 @@
         emailjs
           .send("service_kjjokg6", "template_ar974se", templateParams)
           .then(
-            function (response) {
+            (response) => {
               console.log("SUCCESS!", response.status, response.text);
             },
-            function (error) {
+            (error) => {
               console.log("FAILED...", error);
             }
           );
@@ -324,7 +324,7 @@
           <li>You have 30 minutes to complete the inventory.</li>
         </ul>
 
-        <form onsubmit="sendEmail();">
+        <form id="contact-form" onsubmit="sendEmail(event);">
           <div class="inline-fields">
             <div class="form-field">
               <label for="full-name">Full Name:</label>
@@ -958,45 +958,75 @@
               7. With reference to problems that arise in working in groups:
             </h2>
             <div class="question-bspi">
-              <input type="radio" id="q7a" name="q7" value="I try to find a solution that satisfies everyone." />
+              <input
+                type="radio"
+                id="q7a"
+                name="q7"
+                value="I try to find a solution that satisfies everyone."
+              />
               <label for="q7a"
                 >I try to find a solution that satisfies everyone.</label
               >
             </div>
             <div class="question-bspi">
-              <input type="radio" id="q7b" name="q7" value="I often see a need to challenge the views of others or to hold
-                a minority view myself." />
+              <input
+                type="radio"
+                id="q7b"
+                name="q7"
+                value="I often see a need to challenge the views of others or to hold
+                a minority view myself."
+              />
               <label for="q7b"
                 >I often see a need to challenge the views of others or to hold
                 a minority view myself.</label
               >
             </div>
             <div class="question-bspi">
-              <input type="radio" id="q7c" name="q7" value="I am used to contributing ideas that others might not have
-                thought of." />
+              <input
+                type="radio"
+                id="q7c"
+                name="q7"
+                value="I am used to contributing ideas that others might not have
+                thought of."
+              />
               <label for="q7c"
                 >I am used to contributing ideas that others might not have
                 thought of.</label
               >
             </div>
             <div class="question-bspi">
-              <input type="radio" id="q7d" name="q7" value="I am ready to take action to make sure that a meeting does not
-                waste time or lose sight of its main objectives." />
+              <input
+                type="radio"
+                id="q7d"
+                name="q7"
+                value="I am ready to take action to make sure that a meeting does not
+                waste time or lose sight of its main objectives."
+              />
               <label for="q7d"
                 >I am ready to take action to make sure that a meeting does not
                 waste time or lose sight of its main objectives.</label
               >
             </div>
             <div class="question-bspi">
-              <input type="radio" id="q7e" name="q7" value="I am conscious of and concerned about group morale." />
+              <input
+                type="radio"
+                id="q7e"
+                name="q7"
+                value="I am conscious of and concerned about group morale."
+              />
               <label for="q7e"
                 >I am conscious of and concerned about group morale.</label
               >
             </div>
             <div class="question-bspi">
-              <input type="radio" id="q7f" name="q7" value="I try to find a way of reducing the size of the task by
+              <input
+                type="radio"
+                id="q7f"
+                name="q7"
+                value="I try to find a way of reducing the size of the task by
                 establishing what different individuals might best
-                contribute." />
+                contribute."
+              />
               <label for="q7f"
                 >I try to find a way of reducing the size of the task by
                 establishing what different individuals might best
@@ -1004,16 +1034,26 @@
               >
             </div>
             <div class="question-bspi">
-              <input type="radio" id="q7g" name="q7" value="I believe others appreciate my capacity for good
-                judgment." />
+              <input
+                type="radio"
+                id="q7g"
+                name="q7"
+                value="I believe others appreciate my capacity for good
+                judgment."
+              />
               <label for="q7g"
                 >I believe others appreciate my capacity for good
                 judgment.</label
               >
             </div>
             <div class="question-bspi">
-              <input type="radio" id="q7h" name="q7" value="I draw attention to people who I see as the natural sources of
-                contributions." />
+              <input
+                type="radio"
+                id="q7h"
+                name="q7"
+                value="I draw attention to people who I see as the natural sources of
+                contributions."
+              />
               <label for="q7h"
                 >I draw attention to people who I see as the natural sources of
                 contributions.</label
