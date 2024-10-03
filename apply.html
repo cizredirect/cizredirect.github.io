@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Job Application Form - Cizonet Solutions</title>
+    <link href="assets/img/favicon.png" alt="Cizonet Solutions" rel="icon" />
+    <link
+      href="assets/img/apple-touch-icon.png"
+      alt="Cizonet Solutions"
+      rel="apple-touch-icon"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <link href="assets/css/pool.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <style>
+      .form__container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+      .form-group input[type="submit"] {
+        background-color: #031f49;
+        color: white;
+        cursor: pointer;
+        border: none;
+      }
+      .form-group input[type="submit"]:hover {
+        background-color: #031f05;
+      }
+      .btn-submit.loading {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    </style>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("DHhTcwyiLDvMh3zm2");
+      })();
+
+      function sendEmail(event) {
+        event.preventDefault();
+
+        const submitButton = document.querySelector(".btn-submit");
+        submitButton.value = "Submitting...";
+        submitButton.classList.add("loading");
+        submitButton.disabled = true;
+
+        const userName = document.getElementById("fullName").value;
+        const userEmail = document.getElementById("email").value;
+        const userPhone = document.getElementById("phone").value;
+        const userPosition = document.getElementById("position").value;
+        const userSalary = document.getElementById("desiredSalary").value;
+        const userExperience = document.getElementById("experience").value;
+
+        const templateParams = {
+          to_name: "Cizonet Solutions",
+          from_name: userName,
+          from_email: userEmail,
+          subject: "Job Application",
+          message: `Name: ${userName}\nEmail: ${userEmail}\nPhone: ${userPhone}\nPosition: ${userPosition}\nDesired Salary: ${userSalary}\nExperience: ${userExperience}`,
+        };
+
+        emailjs
+          .send("service_kjjokg6", "template_ar974se", templateParams)
+          .then(
+            function (response) {
+              alert("Application has been sent successfully.");
+              window.location.href = "https://cizonet.com";
+            },
+            function (error) {
+              alert("Failed to send the application. Please try again.");
+              submitButton.value = "Submit Application";
+              submitButton.classList.remove("loading");
+              submitButton.disabled = false;
+            }
+          );
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="header" class="align-items-center pool_header pt-3 pb-1">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <a href=""
+            ><img
+              src="assets/img/logo2.png"
+              alt="Cizonet Solutions - IT & HR Solutions"
+              class="img-fluid"
+          /></a>
+        </div>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li>
+              <a class="nav-link scrollto" href="https://cizonet.com/">Home</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="https://cizonet.com/#about"
+                >About</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="https://cizonet.com/#services"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="https://cizonet.com/#values"
+                >Process</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="https://jobs.cizonet.com/"
+                >Jobs</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="https://blog.cizonet.com/"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="https://cizonet.com/#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+      </div>
+    </div>
+
+    <div class="form__container">
+      <h1>Job Application Form</h1>
+      <form onsubmit="sendEmail(event)">
+        <div class="form-group">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+
+        <div class="form-group">
+          <label for="position">Position Applied For:</label>
+          <input type="text" id="position" name="position" required />
+        </div>
+
+        <div class="form-group">
+          <label for="desiredSalary">Desired Monthly Salary:</label>
+          <input
+            type="number"
+            id="desiredSalary"
+            name="desiredSalary"
+            placeholder="Enter amount in your currency"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Experience:</label>
+          <textarea
+            id="experience"
+            name="experience"
+            rows="5"
+            placeholder="Briefly describe your experience"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="btn-submit" value="Submit Application" />
+        </div>
+      </form>
+    </div>
+
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>Cizonet Solutions</h3>
+              <p>
+                13A, Bujumbura Street<br />
+                Off Libreville Street, Wuse II 900288<br />
+                Abuja, Nigeria <br /><br />
+                <strong>Phone:</strong> +234 813 845 1950<br />
+                <strong>Email:</strong> contact@cizonet.com<br />
+              </p>
+            </div>
+
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#about">About us</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#services">Services</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="https://training.cizonet.com/">Training</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="https://jobs.cizonet.com/">Jobs</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="https://blog.cizonet.com/">Blog</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li>
+                  <i class="bx bx-chevron-right"></i> <a>Web Development</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a>Mobile App Development</a>
+                </li>
+                <li><i class="bx bx-chevron-right"></i> <a>Recruitment</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a>Training</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a>Outsourcing</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 footer-newsletter">
+              <div class="blockquote-custom-icon bg-info shadow-1-strong">
+                <i class="fa fa-quote-left text-white"></i>
+              </div>
+              <p class="mb-0 mt-2 font-italic">
+                "Technology has the power to transform businesses and a strong
+                HR strategy can optimize workforce potential. At Cizonet, we are
+                dedicated to harnessing that power for innovative solutions that
+                drive success, optimizing both IT and HR processes. Together,
+                Let's create a future where technology empowers businesses to
+                thrive, and HR solutions elevate workforce effectiveness."
+              </p>
+              <footer class="blockquote-footer pt-4 mt-4 border-top">
+                Osaze Joseph Obayagbona
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container d-lg-flex py-4">
+        <div class="me-lg-auto text-center text-lg-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Cizonet Solutions</span></strong
+            >. All Rights Reserved
+          </div>
+        </div>
+        <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
+          <a
+            href="https://www.twitter.com/cizonet_co"
+            target="_blank"
+            class="twitter"
+            ><i class="bx bxl-twitter"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/cizonetsolutions"
+            target="_blank"
+            class="facebook"
+            ><i class="bx bxl-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/cizonet"
+            target="_blank"
+            class="instagram"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a
+            href="https://maps.app.goo.gl/Swp8UWF7UMpLHFHo8?g_st=iw"
+            target="_blank"
+            class="google-plus"
+            ><i class="bx bxl-google"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/cizonet"
+            target="_blank"
+            class="linkedin"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a
+            style="background: none !important"
+            target="_blank"
+            href="https://www.goodfirms.co/company/cizonet-solutions"
+            ><img
+              src="https://assets.goodfirms.co/badges/color-badge/business-services.svg"
+              title="Cizonet Solutions Company"
+              alt="Cizonet Solutions Company"
+          /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
